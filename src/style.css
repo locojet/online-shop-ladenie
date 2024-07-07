@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: kolker-brush;
+    src: url(../src/topografias/KolkerBrush-Regular.ttf);
+}
+
+
+
+
+
+
+
+

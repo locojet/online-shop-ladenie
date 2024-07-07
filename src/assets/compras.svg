@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 150 150" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<clipPath id="ArtboardFrame">
+<rect height="150" width="150" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Ebene-1" vectornator:layerName="Ebene 1" visibility="hidden">
+<path d="M-7.0315-9.79693L157.031-9.79693L157.031 159.797L-7.0315 159.797L-7.0315-9.79693Z" fill="#6f6f6f" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rechteck 1"/>
+</g>
+<g clip-path="url(#ArtboardFrame)" id="Ebene-2" vectornator:layerName="Ebene 2">
+<path d="M121.652 88.5827L118.125 59.1321C116.853 48.5195 107.851 40.5312 97.1626 40.5312L53.603 40.5312C42.858 40.5312 33.8271 48.6018 32.624 59.2793L26.5659 113.045C25.1573 125.547 34.9264 136.498 47.5072 136.521L117.097 136.645" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="5.85789" vectornator:layerName="Kurve 7"/>
+<path d="M129.418-48.5166C127.858-42.8985 128.904-36.7777 129.887-31.0303" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.85789" vectornator:layerName="Kurve 1"/>
+<path d="M117.097 125.059L117.097 100.171" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.85789" vectornator:layerName="Linie 1"/>
+<path d="M104.836 112.615L128.621 112.615" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.85789" vectornator:layerName="Linie 2"/>
+<path d="M47.2925 56.0601C47.6925 24.5961 59.2572 11.6324 75 11.6324C90.5614 11.6324 104.16 25.3814 104.836 56.3391" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.85789" vectornator:layerName="Kurve 9"/>
+<path d="M44.6761 57.3301C44.6761 56.9391 45.7982 56.6222 47.1823 56.6222C48.5664 56.6222 49.6884 56.9391 49.6884 57.3301C49.6884 57.721 48.5664 58.0379 47.1823 58.0379C45.7982 58.0379 44.6761 57.721 44.6761 57.3301Z" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="5.85789" vectornator:layerName="Oval 1"/>
+<path d="M102.474 57.4716C102.474 57.1589 103.532 56.9054 104.836 56.9054C106.141 56.9054 107.198 57.1589 107.198 57.4716C107.198 57.7844 106.141 58.0379 104.836 58.0379C103.532 58.0379 102.474 57.7844 102.474 57.4716Z" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.85789" vectornator:layerName="Oval 2"/>
+</g>
+<g id="Ebene-4" vectornator:layerName="Ebene 4"/>
+<g id="Ebene-3" vectornator:layerName="Ebene 3">
+<path d="M109.501 89.775C111.891 89.0013 114.444 88.5827 117.097 88.5827C130.544 88.5827 141.445 99.3419 141.445 112.614C141.445 125.886 130.544 136.645 117.097 136.645C103.649 136.645 92.7482 125.886 92.7482 112.614C92.7482 101.96 99.7733 92.9245 109.501 89.775" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="5.60098" vectornator:layerName="Oval 1"/>
+</g>
+</svg>
