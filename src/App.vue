@@ -5,6 +5,8 @@ import Nav from './components/Nav.vue';
 import Produkte from './components/Produkte.vue';
 import Slogan from './components/Slogan.vue';
 import Sobremi from './components/Sobremi.vue';
+import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 
 
@@ -20,6 +22,8 @@ import Sobremi from './components/Sobremi.vue';
   <PageLoader />
   <Hintergrund />
   <Sobremi />
+  <Contact />
+  <Footer />
 
   
   

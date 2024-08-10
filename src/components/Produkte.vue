@@ -1,5 +1,5 @@
 <template>
-  <div class="container absolute">
+  <div id="section-1" class="container absolute">
     <div class="card">
       <div class="img-container">
         <div class="img"><img src="../assets/gluteo.png" alt="Gluteo"></div>
