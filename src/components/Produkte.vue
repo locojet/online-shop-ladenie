@@ -1,100 +1,77 @@
 <template>
   <div class="container absolute">
-      <div class="card">
-          <div class="img-container">
-              <div class="img"><img src="../assets/gluteo.png" alt="Gluteo"></div>
-          </div>
-          
-          <div class="content text-secondary2">
-            <div class="topograf">
-              <h3 ><a class="link-product" href="#">Gluteonin</a></h3>
-              <p class="description">
-                 80.000 pesos
-              </p>
-            </div>
-              <div class="button-compras">
-            <button class="action-btn meter-a-la-bolsa-de-compras-boton "><img  class="img-compras" src="../assets/compras.svg" alt=""></button>
-          </div>
-              
-          </div>
+    <div class="card">
+      <div class="img-container">
+        <div class="img"><img src="../assets/gluteo.png" alt="Gluteo"></div>
       </div>
-
-
       
-
-      <div class="card">
-          <div class="img-container">
-              <div class="img"><img src="../assets/acond.png" alt="Gluteo"></div>
-          </div>
-          
-          <div class="content  ">
-            <div class="topograf">
-              <h3 ><a class="link-product" href="#">Acondicionador</a></h3>
-              <p class="description">
-                 80.000 pesos
-              </p>
-            </div>
-              <div class="button-compras">
-            <button class="action-btn meter-a-la-bolsa-de-compras-boton "><img  class="img-compras" src="../assets/compras.svg" alt=""></button>
-          </div>
-              
-          </div>
+      <div class="content text-secondary2">
+        <div class="topograf">
+          <h3><a class="link-product" href="#">Gluteonin</a></h3>
+          <p class="description">80.000 pesos</p>
+        </div>
+        <div class="button-compras">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+            <img class="img-compras" src="../assets/compras.svg" alt="">
+          </button>
+        </div>
       </div>
+    </div>
 
-
-
-
-      <div class="card">
-          <div class="img-container">
-              <div class="img"><img src="../assets/acond.png" alt="Gluteo"></div>
-          </div>
-          
-          <div class="content ">
-            <div class="topograf">
-              <h3 ><a class="link-product" href="#">Shampoo</a></h3>
-              <p class="description">
-                 80.000 pesos
-              </p>
-            </div>
-              <div class="button-compras">
-            <button class="action-btn meter-a-la-bolsa-de-compras-boton "><img  class="img-compras" src="../assets/compras.svg" alt=""></button>
-          </div>
-              
-          </div>
+    <div class="card">
+      <div class="img-container">
+        <div class="img"><img src="../assets/acond.png" alt="Acondicionador"></div>
       </div>
-
-
-
-
-       <div class="card">
-          <div class="img-container">
-              <div class="img"><img src="../assets/acond.png" alt="Gluteo"></div>
-          </div>
-          
-          <div class="content">
-            <div class="topograf">
-              <h3><a class="link-product" href="#">Combo</a></h3>
-              <p class="description">
-                 40.000 pesos
-              </p>
-            </div>
-              <div class="button-compras">
-            <button class="action-btn meter-a-la-bolsa-de-compras-boton"><img src="../assets/compras.svg" alt=""></button>
-          </div>
-              
-          </div>
-
-
-
-
-          
-      </div>
-
-
       
+      <div class="content">
+        <div class="topograf">
+          <h3><a class="link-product" href="#">Acondicionador</a></h3>
+          <p class="description">80.000 pesos</p>
+        </div>
+        <div class="button-compras">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+            <img class="img-compras" src="../assets/compras.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img-container shampoo">
+        <div class="img"><img src="../assets/shampoo.png" alt="Shampoo"></div>
+      </div>
+      
+      <div class="content">
+        <div class="topograf">
+          <h3><a class="link-product" href="#">Shampoo</a></h3>
+          <p class="description">80.000 pesos</p>
+        </div>
+        <div class="button-compras">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+            <img class="img-compras" src="../assets/compras.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img-container combo">
+        <div class="img"><img src="../assets/combo.png" alt="Combo"></div>
+      </div>
+      
+      <div class="content">
+        <div class="topograf">
+          <h3><a class="link-product" href="#">Combo</a></h3>
+          <p class="description">240.000 pesos</p>
+        </div>
+        <div class="button-compras">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+            <img class="img-compras" src="../assets/compras.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-
-  
 </template>
 <style scoped>
 * {
@@ -125,17 +102,10 @@ html, body {
   min-height: 550px;
   position: relative;
   overflow: hidden;
-  
-  
+  margin: 3rem 3rem 0 3rem;
 }
 
-.card{
-  margin:3rem 3rem 0 3rem;
-  
-  
-}
-
-.card:nth-child(4){
+.card:nth-child(4) {
   margin-top: -6rem;
 }
 
@@ -152,7 +122,14 @@ html, body {
   border-radius: 25px;
   transition: transform 0.1s ease-in-out;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
-  
+}
+
+.img-container.shampoo .img img {
+  transform: scale(0.85); /* Makes the shampoo image smaller */
+}
+
+.img img:hover {
+  transform: scale(1.02); /* Adds a slight zoom effect on hover */
 }
 
 .content {
@@ -173,28 +150,17 @@ html, body {
   border-radius: 10px;
   margin-top: 0;
   color: #fff;
-  
-  
+  opacity: 0;
+  transition: opacity 2s ease-out;
 }
-
-.content {
-    opacity: 0;
-    transition: opacity 2s ease-out;
-    
-}
-
-
 
 .content.visible {
-    opacity: 1;
+  opacity: 1;
 }
 
 .topograf {
   text-align: left;
   flex-grow: 1;
-  
-  
-  
 }
 
 .button-compras {
@@ -212,33 +178,33 @@ html, body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.img img:hover {
-  transform: scale(1.02);
-}
-
 .link-product {
-  
   text-decoration: underline;
 }
 
 .link-product:hover {
   text-decoration: underline;
   transform: scale(1.02);
-
 }
 
+.img-container.combo .img img {
+  transform: scale(1); /* Makes the shampoo image smaller */
+}
 
 @media (max-width: 1187px) {
-.card:nth-child(3){
-  margin-top: -6.1rem;
+  .card:nth-child(3) {
+    margin-top: -6.1rem;
+  }
 }
-  
-}
+
 @media (max-width: 780px) {
+
+  .img-container.shampoo .img img {
+  transform: scale(1); /* Makes the shampoo image smaller */
+}
   .container {
     flex-direction: column;
     margin-top: 0rem;
-    
   }
 
   .card {
@@ -261,24 +227,19 @@ html, body {
 
   .img-container {
     width: 100%; /* Anpassung der Bildcontainer-Breite auf kleineren Bildschirmen */
-    transform: scale(1.3);
     margin-top: 6rem;
     margin-bottom: 1.2rem;
-  
   }
 
-  .card:nth-child(4){
-  margin-top: -2rem;
-}
+  .img-container.shampoo {
+    transform: scale(0.8); /* Adjusting the scaling for smaller screens */
+  }
 
-
-
-
-
-  
+  .card:nth-child(4) {
+    margin-top: -2rem;
+  }
 }
 </style>
-
 <script setup>
 document.addEventListener('DOMContentLoaded', function() {
     const options = {
@@ -304,7 +265,4 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
-
-
 </script>
-

@@ -8,6 +8,7 @@ import Sobremi from './components/Sobremi.vue';
 
 
 
+
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Sobremi from './components/Sobremi.vue';
   <PageLoader />
   <Hintergrund />
   <Sobremi />
+
   
   
   

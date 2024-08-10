@@ -1,21 +1,26 @@
 <template>
   <div class="page-loader" v-if="!isloaded">
-    <div class="cube"></div>
-    
-    <div class="cube"></div>
+    <div class="cube">
+      <img src="../assets/logoweiss.png" alt="Logo">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
   </div> 
 </template>
 
 <script>
   export default {
-    data: () => {
+    data() {
       return {
         isloaded: false
       }
     },
     mounted() {
       document.onreadystatechange = () => {
-        if (document.readyState == "complete") { 
+        if (document.readyState === "complete") { 
           this.isloaded = true;
         } 
       }
@@ -24,10 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-   $colors: #f3bcd1, #f3bcd1, #f3bcd1, #f3bcd1;
-
-  // -----------------------------------------------------
-
   .page-loader {
     display: flex;
     justify-content: center;
@@ -41,46 +42,65 @@
     z-index: 999;
   }
 
-  // -----------------------------------------------------
-
-  .cube{
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+  .cube {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Ajuste del ancho */
+    height: 150px; /* Ajuste del alto */
+    overflow: hidden;
     border-radius: 50%;
+    animation: zoom 3s infinite alternate;
 
-    @for $i from 1 through length($colors) {
-      &:nth-child(#{$i}) {
-        background-color: nth($colors, $i);
+    img {
+      width: 100%; /* Ajuste del ancho */
+      height: auto;
+      display: block;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: space-between;
+      width: 60px;
+      margin-top: 10px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        animation: bounce 1.5s infinite;
+      }
+
+      .dot:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      .dot:nth-child(3) {
+        animation-delay: 0.6s;
       }
     }
+  }
 
-    &:first-child {
-      animation: left 1s infinite;
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
     }
-
-    &:last-child {
-      animation: right 1s infinite .5s;
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 
-  // -----------------------------------------------------
-
-  @keyframes left {
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(1);
+    }
     40% {
-      transform: translateX(-60px);
-    }
-    50% {
-      transform: translateX(0);      
-    }
-  }
-
-  @keyframes right {
-    40% {
-      transform: translateX(60px);
-    }
-    50% {
-      transform: translateX(0);
+      transform: scale(1.5);
     }
   }
 </style>
