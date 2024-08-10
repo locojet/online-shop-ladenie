@@ -63,8 +63,8 @@
   
   <style scoped>
   .footer-section {
-    background-color: #000000; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #ffffff; /* Fondo oscuro */
+    color: #000000; /* Texto blanco */
     padding: 3rem 0;
     width: 100vw;
   }
