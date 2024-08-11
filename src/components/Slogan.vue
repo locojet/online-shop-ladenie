@@ -1,6 +1,6 @@
 <template>
     <div id="section-0" class="video-background">
-        <video autoplay muted loop id="background-video" style="filter: sepia(100%) hue-rotate(-70deg) brightness(40%);">
+        <video autoplay muted loop playsinline id="background-video" style="filter: sepia(100%) hue-rotate(-70deg) brightness(40%);">
             <source src="../assets/Automatic.mp4" type="video/mp4">
             Ihr Browser unterstützt keine Video-Tags.
         </video>
