@@ -4,14 +4,13 @@
       <div class="img-container">
         <div class="img"><img src="../assets/gluteo.png" alt="Gluteo"></div>
       </div>
-      
       <div class="content text-secondary2">
         <div class="topograf">
           <h3><a class="link-product" href="#">Gluteonin</a></h3>
           <p class="description">80.000 pesos</p>
         </div>
         <div class="button-compras">
-          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton" @click="addToCart">
             <img class="img-compras" src="../assets/compras.svg" alt="">
           </button>
         </div>
@@ -22,14 +21,13 @@
       <div class="img-container">
         <div class="img"><img src="../assets/acond.png" alt="Acondicionador"></div>
       </div>
-      
       <div class="content">
         <div class="topograf">
           <h3><a class="link-product" href="#">Acondicionador</a></h3>
           <p class="description">80.000 pesos</p>
         </div>
         <div class="button-compras">
-          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton" @click="addToCart">
             <img class="img-compras" src="../assets/compras.svg" alt="">
           </button>
         </div>
@@ -40,14 +38,13 @@
       <div class="img-container shampoo">
         <div class="img"><img src="../assets/shampoo.png" alt="Shampoo"></div>
       </div>
-      
       <div class="content">
         <div class="topograf">
           <h3><a class="link-product" href="#">Shampoo</a></h3>
           <p class="description">80.000 pesos</p>
         </div>
         <div class="button-compras">
-          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton" @click="addToCart">
             <img class="img-compras" src="../assets/compras.svg" alt="">
           </button>
         </div>
@@ -58,14 +55,13 @@
       <div class="img-container combo">
         <div class="img"><img src="../assets/combo.png" alt="Combo"></div>
       </div>
-      
       <div class="content">
         <div class="topograf">
           <h3><a class="link-product" href="#">Combo</a></h3>
           <p class="description">240.000 pesos</p>
         </div>
         <div class="button-compras">
-          <button class="action-btn meter-a-la-bolsa-de-compras-boton">
+          <button class="action-btn meter-a-la-bolsa-de-compras-boton" @click="addToCart">
             <img class="img-compras" src="../assets/compras.svg" alt="">
           </button>
         </div>
@@ -73,6 +69,40 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { agregarProductoACanasta } from '../state';
+
+function addToCart() {
+  agregarProductoACanasta();
+}
+
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, options);
+
+  const elements = document.querySelectorAll('.content');
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
+</script>
+
 <style scoped>
 * {
   box-sizing: border-box;
@@ -91,14 +121,14 @@ html, body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 7rem;
   max-width: 100%;
   z-index: 10;
   overflow-x: hidden;
 }
 
 .card {
-  width: 300px; /* Beibehalten der festen Breite für die Karten */
+  width: 300px;
   min-height: 550px;
   position: relative;
   overflow: hidden;
@@ -125,11 +155,12 @@ html, body {
 }
 
 .img-container.shampoo .img img {
-  transform: scale(0.85); /* Makes the shampoo image smaller */
+  transform: scale(0.85);
 }
 
-.img img:hover {
-  transform: scale(1.02); /* Adds a slight zoom effect on hover */
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
 }
 
 .content {
@@ -188,7 +219,7 @@ html, body {
 }
 
 .img-container.combo .img img {
-  transform: scale(1); /* Makes the shampoo image smaller */
+  transform: scale(1);
 }
 
 @media (max-width: 1187px) {
@@ -198,17 +229,17 @@ html, body {
 }
 
 @media (max-width: 780px) {
-
   .img-container.shampoo .img img {
-  transform: scale(1); /* Makes the shampoo image smaller */
-}
+    transform: scale(1);
+  }
+
   .container {
     flex-direction: column;
     margin-top: 0rem;
   }
 
   .card {
-    width: 20rem; /* Volle Breite der Karte auf kleineren Bildschirmen */
+    width: 20rem;
     margin: 0 auto 2rem;
     margin-top: -2rem;
   }
@@ -226,43 +257,19 @@ html, body {
   }
 
   .img-container {
-    width: 100%; /* Anpassung der Bildcontainer-Breite auf kleineren Bildschirmen */
+    width: 100%;
     margin-top: 6rem;
     margin-bottom: 1.2rem;
   }
 
   .img-container.shampoo {
-    transform: scale(0.8); /* Adjusting the scaling for smaller screens */
+    transform: scale(0.8);
   }
-
+  .card:nth-child(3) {
+    margin-top: -4rem;
+  }
   .card:nth-child(4) {
     margin-top: -2rem;
   }
 }
 </style>
-<script setup>
-document.addEventListener('DOMContentLoaded', function() {
-    const options = {
-        root: null, // nutzt den Viewport als Wurzel
-        rootMargin: '0px',
-        threshold: 0.1 // wird ausgelöst, wenn 10% des Elements sichtbar sind
-    };
-
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Fügt die Klasse 'visible' hinzu, wenn das Element sichtbar wird
-                entry.target.classList.add('visible');
-            } else {
-                // Entfernt die Klasse 'visible', wenn das Element nicht sichtbar ist
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, options);
-
-    const elements = document.querySelectorAll('.content');
-    elements.forEach(element => {
-        observer.observe(element);
-    });
-});
-</script>

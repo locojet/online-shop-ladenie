@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      positions: Array.from({ length: 50 }, () => this.initialPosition()),
+      positions: Array.from({ length: 30 }, () => this.initialPosition()),
     };
   },
   methods: {
