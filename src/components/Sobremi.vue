@@ -7,7 +7,7 @@
       <div class="flex-1 mt-6 md:mt-0 md:ml-12">
         <h2 class="text-xl font-semibold">Sobre Mi</h2>
         <p class="mt-4 text-base text-gray-600">
-          Soy Alejandra Mejia, una joven emprendedora apasionada por la creación de productos naturales que realmente marquen la diferencia. En nuestro laboratorio, ubicado en Manizales, nos dedicamos a la fabricación de acondicionadores, shampoos y suplementos que promueven la salud y la belleza de manera integral y sostenible.
+          
 
           
 Soy Alejandra Mejía, una joven emprendedora apasionada por el poder de la naturaleza para mejorar nuestra vida. Con esta inspiración, fundé Ladenie para ofrecer productos de alta calidad hechos con ingredientes naturales. Cada fórmula es desarrollada cuidadosamente para brindar lo mejor en cuidado personal.
