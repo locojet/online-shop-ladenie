@@ -12,7 +12,7 @@
 
     <!-- Icons rechts unten im Video -->
     <div  id="icons-medien" class="social-icons" :class="{ 'hidden': isHidden }">
-        <a target="_blank" href="https://www.instagram.com/ladenieoficial">
+        <a target="_blank" href="https://www.instagram.com/alenintips">
             <img src="../assets/instagramicon.png" alt="Instagram" class="icon" />
         </a>
         <a target="_blank" href="https://www.tiktok.com/@alenintips?_t=8omB1tLfpE8&_r=1">
