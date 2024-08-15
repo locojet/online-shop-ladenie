@@ -72,12 +72,20 @@
 
 <script setup>
 import { agregarProductoACanasta } from '../state';
+import { onMounted } from 'vue';
 
+// Funktion, die das Hinzufügen zum Einkaufswagen behandelt
 function addToCart() {
-  agregarProductoACanasta();
+  agregarProductoACanasta(); // Füge Produkt zum Einkaufswagen hinzu
+  vibrate(); // Lasse das Gerät vibrieren
 }
 
-import { onMounted } from 'vue';
+// Funktion, um das Gerät vibrieren zu lassen
+function vibrate() {
+  if (navigator.vibrate) {
+    navigator.vibrate(200); // Vibriert für 200ms
+  }
+}
 
 onMounted(() => {
   const options = {
