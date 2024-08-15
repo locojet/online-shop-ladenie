@@ -5,7 +5,8 @@
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <!-- Mobile menu button -->
-            <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-white bg-secondary hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white bg-secondary hover:bg-secondary hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span class="absolute -inset-0.5" />
               <span class="sr-only">Open main menu</span>
               <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -80,15 +81,12 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue';
 import { productosEnCanasta } from '../state'; // Importiere die globale Variable
-
-// Die restlichen Imports
-import { ref } from 'vue';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 import VueScrollTo from 'vue-scrollto';
 
-// Die restlichen Funktionen und Variablen
 const navigation = [
   { name: 'Home', href: '#section-0', current: true },
   { name: 'Productos', href: '#section-1', current: false },
@@ -100,6 +98,20 @@ const navigation = [
 function scrollTo(target) {
   VueScrollTo.scrollTo(target, 800);  // 800ms für eine sanfte Scroll-Animation
 }
+
+// Funktion, die das Handy vibrieren lässt
+function vibrate() {
+  if (navigator.vibrate) {
+    navigator.vibrate(200);  // Vibriert für 200ms
+  }
+}
+
+// Überwache Änderungen bei 'productosEnCanasta'
+watch(productosEnCanasta, (newValue, oldValue) => {
+  if (newValue > oldValue) {
+    vibrate();  // Lasse das Handy vibrieren, wenn ein neues Produkt hinzugefügt wurde
+  }
+});
 </script>
 
 <style scoped>
