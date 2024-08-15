@@ -72,19 +72,20 @@
 
 <script setup>
 import { agregarProductoACanasta } from '../state';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 // Funktion, die das Hinzufügen zum Einkaufswagen behandelt
-function addToCart() {
+function addToCart(event) {
   agregarProductoACanasta(); // Füge Produkt zum Einkaufswagen hinzu
-  vibrate(); // Lasse das Gerät vibrieren
+  animateButton(event.target); // Führe eine Animation auf dem Button aus
 }
 
-// Funktion, um das Gerät vibrieren zu lassen
-function vibrate() {
-  if (navigator.vibrate) {
-    navigator.vibrate(200); // Vibriert für 200ms
-  }
+// Funktion, um den Button zu animieren
+function animateButton(button) {
+  button.classList.add('animate');
+  setTimeout(() => {
+    button.classList.remove('animate');
+  }, 300); // Dauer der Animation in Millisekunden
 }
 
 onMounted(() => {
@@ -215,6 +216,26 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+}
+
+/* Animation für den Button */
+.meter-a-la-bolsa-de-compras-boton.animate {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #f483ae;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #fbb1c1;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #f483ae;
+  }
 }
 
 .link-product {
