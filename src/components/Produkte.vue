@@ -72,21 +72,12 @@
 
 <script setup>
 import { agregarProductoACanasta } from '../state';
-import { onMounted, ref } from 'vue';
 
-// Funktion, die das Hinzufügen zum Einkaufswagen behandelt
-function addToCart(event) {
-  agregarProductoACanasta(); // Füge Produkt zum Einkaufswagen hinzu
-  animateButton(event.target); // Führe eine Animation auf dem Button aus
+function addToCart() {
+  agregarProductoACanasta();
 }
 
-// Funktion, um den Button zu animieren
-function animateButton(button) {
-  button.classList.add('animate');
-  setTimeout(() => {
-    button.classList.remove('animate');
-  }, 300); // Dauer der Animation in Millisekunden
-}
+import { onMounted } from 'vue';
 
 onMounted(() => {
   const options = {
@@ -216,26 +207,6 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
-
-/* Animation für den Button */
-.meter-a-la-bolsa-de-compras-boton.animate {
-  animation: pulse 0.3s ease-in-out;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    background-color: #f483ae;
-  }
-  50% {
-    transform: scale(1.1);
-    background-color: #fbb1c1;
-  }
-  100% {
-    transform: scale(1);
-    background-color: #f483ae;
-  }
 }
 
 .link-product {
